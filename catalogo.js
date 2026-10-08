@@ -197,11 +197,11 @@ function indice() {
   const items = [["Inflables y activaciones", 3], ["Material POP", 5], ["Gorras y dotaciones", 6], ["Bolsos y morrales", 7], ["Escritura y oficina", 8], ["Plásticos de inyección", 9], ["Regalos corporativos", 10], ["Catering empresarial", 11], ["Semana de la Salud", 12], ["Cómo trabajamos", 13]];
   return `<div class="page" data-titulo="Índice"><div class="pg">
     <div class="intro">
-      <span class="tag-r">Bienvenido</span>
+      
       <h2>Somos tu aliado para toda la visibilidad de tu marca</h2>
       <p>En Gonflé diseñamos, producimos y personalizamos productos y experiencias que hacen visible tu marca, fortalecen tus equipos y generan un impacto positivo en tus clientes.</p>
     </div>
-    <h4 class="ind-t">Contenido</h4>
+    <h4 class="ind-t">En este catálogo</h4>
     <ol class="indice">${items.map(([t, p]) => `<li><a href="#" data-ir="${p}"><span>${t}</span><b>${String(p).padStart(2, "0")}</b></a></li>`).join("")}</ol>
     <p class="ayuda">Toca el botón <b>Cotizar</b> de cualquier producto y te escribimos por WhatsApp.</p>
     ${pie(2)}
