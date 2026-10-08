@@ -31,7 +31,7 @@ const SECCIONES = [
     },
   },
   {
-    id: "pop", color: "morado", tag: "Material POP",
+    id: "pop", color: "amarillo", tag: "Material POP",
     titulo: "Tu marca domina el punto de venta",
     intro: "Producción propia en litografía y sellado por alta frecuencia, en volumen.",
     layout: "iconos",
@@ -48,7 +48,7 @@ const SECCIONES = [
     nota: "Manillas, cenefas y litografía: desde miles de unidades.",
   },
   {
-    id: "textil", color: "amarillo", tag: "Merchandising · Textil",
+    id: "textil", color: "rojo", tag: "Merchandising · Textil",
     titulo: "Gorras y dotaciones",
     layout: "filas",
     productos: [
@@ -69,7 +69,7 @@ const SECCIONES = [
     ],
   },
   {
-    id: "oficina", color: "amarillo", tag: "Merchandising · Oficina",
+    id: "oficina", color: "rojo", tag: "Merchandising · Oficina",
     titulo: "Escritura y oficina",
     layout: "filas",
     productos: [
@@ -79,7 +79,7 @@ const SECCIONES = [
     ],
   },
   {
-    id: "plasticos", color: "morado", tag: "Plásticos de inyección",
+    id: "plasticos", color: "amarillo", tag: "Plásticos de inyección",
     titulo: "Vasos, recipientes y hogar",
     intro: "Productos plásticos marcados con tu logo por tampografía, serigrafía o etiqueta.",
     layout: "grid",
@@ -95,7 +95,7 @@ const SECCIONES = [
     titulo: "Regalos que dejan huella",
     intro: "Cajas personalizadas y kits empresariales para colaboradores, clientes y proveedores.",
     layout: "destacado",
-    mosaico: ["regalo-libretas.webp", "regalo-bolsa.webp", "regalo-boligrafos.webp", "regalo-paraguas.webp"],
+    foto: "foto-regalos.webp",
     lista: ["Cajas personalizadas y de Navidad", "Kits empresariales", "Regalos para colaboradores, clientes y proveedores", "Empaques y tarjetas con tu marca", "Opciones para cada presupuesto"],
     cta: "Quiero un kit para mi empresa",
   },
@@ -104,16 +104,16 @@ const SECCIONES = [
     titulo: "Alimentamos los momentos que hacen equipo",
     intro: "Alimentación para reuniones, capacitaciones y eventos corporativos.",
     layout: "destacado",
-    foto: "catering-kit.webp",
+    foto: "foto-catering.webp",
     lista: ["Desayunos y brunch", "Refrigerios AM y PM", "Lunch box y almuerzos", "Estaciones de alimentos", "Eventos y cierres de año"],
     cta: "Cotizar catering",
   },
   {
-    id: "bienestar", color: "morado", tag: "Semana de la Salud",
+    id: "bienestar", color: "rojo", tag: "Semana de la Salud",
     titulo: "Bienestar para tus colaboradores",
     intro: "Jornadas completas con alimentación saludable y material de marca.",
     layout: "destacado",
-    foto: "bienestar-kit.webp",
+    foto: "foto-salud.webp",
     lista: ["Refrigerios saludables", "Desayunos y almuerzos", "Kits de bienestar", "Actividades y capacitaciones"],
     cta: "Planear mi Semana de la Salud",
   },
@@ -182,10 +182,11 @@ function pagSeccion(s, num) {
 function portada() {
   return `<div class="page" data-density="hard" data-titulo="Portada"><div class="pg portada">
     <span class="blob b1"></span><span class="blob b2"></span><span class="blob b3"></span>
-    <img class="logo" src="${IMG}logo-gonfle-blanco.png" alt="Gonflé. Sentimos tu marca">
+    <img class="logo" src="${IMG}logo-gonfle.png" alt="Gonflé. Sentimos tu marca">
+    <div class="pt-foto"><img src="${IMG}foto-evento.webp" alt=""></div>
     <div class="pt-txt">
       <span class="ey">Catálogo de productos</span>
-      <h1>Hacemos que tu marca <em>se vea, se toque y se recuerde.</em></h1>
+      <h1>Hacemos que tu marca <em>se vea, se toque</em> <u>y se recuerde.</u></h1>
     </div>
     <ul class="pt-lineas"><li>Inflables</li><li>Material POP</li><li>Merchandising</li><li>Regalos corporativos</li><li>Catering</li><li>Bienestar</li></ul>
     <p class="pt-pie">Medellín · Colombia</p>
@@ -210,7 +211,7 @@ function indice() {
 function proceso() {
   const pasos = [["Conversamos", "Nos cuentas qué necesitas, cuántas unidades y para qué fecha."], ["Proponemos", "Te enviamos una cotización a la medida de tu presupuesto."], ["Aprobamos el diseño", "Validas el arte con tu logo antes de producir."], ["Producimos y entregamos", "Coordinamos producción y entrega en la fecha acordada."]];
   return `<div class="page" data-titulo="Cómo trabajamos"><div class="pg">
-    ${cab({ color: "morado", tag: "Cómo trabajamos", titulo: "De la idea a la entrega" })}
+    ${cab({ color: "amarillo", tag: "Cómo trabajamos", titulo: "De la idea a la entrega" })}
     <div class="cuerpo">
       <ol class="pasos">${pasos.map(([t, d]) => `<li><b>${t}</b><span>${d}</span></li>`).join("")}</ol>
       <div class="cond">
