@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Gonflé | Catálogo de productos</title>
+<meta name="description" content="Catálogo de Gonflé: inflables, material POP, merchandising, regalos corporativos, catering y bienestar para empresas. Cotiza por WhatsApp.">
+<meta name="theme-color" content="#2E1350">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="es_CO">
+<meta property="og:site_name" content="Gonflé">
+<meta property="og:title" content="Gonflé | Catálogo de productos">
+<meta property="og:description" content="Hojea nuestro catálogo y cotiza cualquier producto por WhatsApp.">
+<meta property="og:image" content="https://davidmonacorrales1202-svg.github.io/gonfle-catalogo/assets/img/og.png">
+<meta property="og:url" content="https://davidmonacorrales1202-svg.github.io/gonfle-catalogo/">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="assets/img/logo-gonfle-sin-slogan.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="catalogo.css?v=1">
+</head>
+<body>
+<header class="barra">
+  <img src="assets/img/logo-gonfle-blanco.png" alt="Gonflé. Sentimos tu marca">
+  <div class="acc">
+    <a class="bt bt-linea" href="descargas/Gonfle-catalogo.pdf" download><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M12 4v11m0 0-4.5-4.5M12 15l4.5-4.5M5 20h14"/></svg><span>Descargar PDF</span></a>
+    <a class="bt bt-wa" href="https://wa.me/573127576447?text=Hola%20Gonfl%C3%A9%2C%20vi%20su%20cat%C3%A1logo%20y%20quiero%20cotizar." target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-wa"/></svg>WhatsApp</a>
+  </div>
+</header>
+
+<main class="escena">
+  <div class="marco"><div id="libro" aria-label="Catálogo de Gonflé"></div></div>
+  <nav class="controles" aria-label="Pasar páginas">
+    <button id="ant" type="button" aria-label="Página anterior">‹</button>
+    <div class="estado" aria-live="polite"><b id="contador">1 / 14</b><span id="seccion"></span></div>
+    <button id="sig" type="button" aria-label="Página siguiente">›</button>
+  </nav>
+</main>
+<div class="pista" id="pista">Arrastra la esquina o usa las flechas para pasar las páginas</div>
+
+<script src="vendor/page-flip.browser.js"></script>
+<script src="catalogo.js?v=1"></script>
+</body>
+</html>
