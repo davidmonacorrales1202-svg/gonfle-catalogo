@@ -263,6 +263,16 @@ function iniciarLibro() {
     showPageCorners: true, swipeDistance: 20,
   });
   libro.loadFromHTML(el.querySelectorAll(".page"));
+  // En modo de una página (celular) la librería bloquea flipPrev porque su punto de inicio no cae en la
+  // zona de esquina exigida por disableFlipByClick. Se omite esa validación solo durante el retroceso;
+  // así funcionan el botón, la flecha del teclado y el gesto de deslizar hacia la derecha.
+  const retroceder = libro.flipPrev.bind(libro);
+  libro.flipPrev = (esquina) => {
+    const ajustes = libro.getSettings();
+    const antes = ajustes.disableFlipByClick;
+    ajustes.disableFlipByClick = false;
+    try { retroceder(esquina); } finally { ajustes.disableFlipByClick = antes; }
+  };
   const total = libro.getPageCount();
   const cont = document.getElementById("contador");
   const nombre = (i) => el.querySelectorAll(".page")[i]?.dataset.titulo || "";
