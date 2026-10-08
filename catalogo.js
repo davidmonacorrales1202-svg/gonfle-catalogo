@@ -109,13 +109,13 @@ const SECCIONES = [
     cta: "Cotizar catering",
   },
   {
-    id: "bienestar", color: "rojo", tag: "Semana de la Salud",
-    titulo: "Bienestar para tus colaboradores",
-    intro: "Jornadas completas con alimentación saludable y material de marca.",
+    id: "bienestar", color: "rojo", tag: "Proyectos especiales",
+    titulo: "Proyectos a la medida de tu empresa",
+    intro: "Combinamos alimentación, regalos, publicidad e inflables en una sola solución.",
     layout: "destacado",
     foto: "foto-salud.webp",
-    lista: ["Refrigerios saludables", "Desayunos y almuerzos", "Kits de bienestar", "Actividades y capacitaciones"],
-    cta: "Planear mi Semana de la Salud",
+    lista: ["Semana de la Salud y bienestar", "Fin de año empresarial", "Lanzamientos de producto", "Bienvenida de colaboradores", "Atención a clientes VIP"],
+    cta: "Cuéntanos tu proyecto",
   },
 ];
 
@@ -188,13 +188,13 @@ function portada() {
       <span class="ey">Catálogo de productos</span>
       <h1>Hacemos que tu marca <em>se vea, se toque</em> <u>y se recuerde.</u></h1>
     </div>
-    <ul class="pt-lineas"><li>Inflables</li><li>Material POP</li><li>Merchandising</li><li>Regalos corporativos</li><li>Catering</li><li>Bienestar</li></ul>
+    <ul class="pt-lineas"><li>Inflables</li><li>Material POP</li><li>Merchandising</li><li>Regalos corporativos</li><li>Catering</li><li>Proyectos especiales</li></ul>
     <p class="pt-pie">Medellín · Colombia</p>
   </div></div>`;
 }
 
 function indice() {
-  const items = [["Inflables y activaciones", 3], ["Material POP", 5], ["Gorras y dotaciones", 6], ["Bolsos y morrales", 7], ["Escritura y oficina", 8], ["Plásticos de inyección", 9], ["Regalos corporativos", 10], ["Catering empresarial", 11], ["Semana de la Salud", 12], ["Cómo trabajamos", 13]];
+  const items = [["Inflables y activaciones", 3], ["Material POP", 5], ["Gorras y dotaciones", 6], ["Bolsos y morrales", 7], ["Escritura y oficina", 8], ["Plásticos de inyección", 9], ["Regalos corporativos", 10], ["Catering empresarial", 11], ["Proyectos especiales", 12], ["Cómo trabajamos", 13]];
   return `<div class="page" data-titulo="Índice"><div class="pg">
     <div class="intro">
       
