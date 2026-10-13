@@ -7,7 +7,7 @@ const esc = (s) => String(s).replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&l
 
 const SECCIONES = [
   {
-    id: "inflables", color: "rojo", tag: "Inflables y activaciones",
+    id: "inflables", color: "rojo", tag: "Inflables y activaciones", indice: "Inflables y activaciones",
     titulo: "Inflables que se ven desde lejos",
     intro: "Diseñamos y fabricamos inflables a la medida, a motor o sellados, con la forma y el arte de tu marca.",
     layout: "filas",
@@ -31,7 +31,7 @@ const SECCIONES = [
     },
   },
   {
-    id: "pop", color: "amarillo", tag: "Material POP",
+    id: "pop", color: "amarillo", tag: "Material POP", indice: "Material POP",
     titulo: "Tu marca domina el punto de venta",
     intro: "Producción propia en litografía y sellado por alta frecuencia, en volumen.",
     layout: "iconos",
@@ -48,7 +48,21 @@ const SECCIONES = [
     nota: "Manillas, cenefas y litografía: desde miles de unidades.",
   },
   {
-    id: "textil", color: "rojo", tag: "Merchandising · Textil",
+    id: "exhibidores", color: "amarillo", tag: "Material POP · Exhibidores", indice: "Exhibidores para punto de venta",
+    titulo: "Exhibidores para punto de venta",
+    intro: "Piezas impresas que ganan espacio y atención en la góndola y el punto de pago.",
+    layout: "grid", variante: "g6",
+    productos: [
+      { n: "Exhibidor de punto de pago", img: "pop-exhibidor.webp", d: "Capta la atención del cliente en el momento de pagar.", s: ["Alta calidad de impresión"] },
+      { n: "Chispa o saltarín", img: "pop-saltarin.webp", d: "Sobresale en el lineal y llama la atención.", s: ["Ecoamigable"] },
+      { n: "Porta afiches", img: "pop-portaafiches.webp", d: "Destaca promociones en zonas de alto tráfico.", s: ["Alta durabilidad"] },
+      { n: "Ristra", img: "pop-ristra.webp", d: "Exhibe productos sin ocupar espacio en la góndola.", s: ["Alta calidad de impresión"] },
+      { n: "Rompetráfico", img: "pop-rompetrafico.webp", d: "Mayor impacto dentro del lineal.", s: ["Capta al comprador"] },
+      { n: "Solapa portaprecio", img: "pop-portaprecio.webp", d: "Identificación rápida del precio y las promociones.", s: ["Alta durabilidad"] },
+    ],
+  },
+  {
+    id: "textil", color: "rojo", tag: "Merchandising · Textil", indice: "Merchandising",
     titulo: "Gorras y dotaciones",
     layout: "filas",
     productos: [
@@ -79,7 +93,7 @@ const SECCIONES = [
     ],
   },
   {
-    id: "plasticos", color: "amarillo", tag: "Plásticos de inyección",
+    id: "plasticos", color: "amarillo", tag: "Plásticos de inyección", indice: "Plásticos de inyección",
     titulo: "Vasos, recipientes y hogar",
     intro: "Productos plásticos marcados con tu logo por tampografía, serigrafía o etiqueta.",
     layout: "grid",
@@ -91,7 +105,65 @@ const SECCIONES = [
     ],
   },
   {
-    id: "regalos", color: "rojo", tag: "Regalos corporativos",
+    id: "imp-bolsas", color: "rojo", tag: "Impresos y empaques · Bolsas", indice: "Impresos y empaques",
+    titulo: "Bolsas con tu marca",
+    intro: "Bolsas de papel impresas con tu logo para tiendas, eventos y regalos.",
+    layout: "grid", variante: "fotos",
+    productos: [
+      { n: "Bolsa premium con cordón", img: "imp-bolsas-premium.webp", d: "Acabado elegante para marcas y regalos.", s: ["Personalizable con tu logo", "Medidas y cantidad a la medida"] },
+      { n: "Bolsas de colores", img: "imp-bolsas-colores.webp", d: "Bolsas con troquel en la paleta de tu marca.", s: ["Personalizable con tu logo", "Medidas y cantidad a la medida"] },
+      { n: "Bolsa ilustrada", img: "imp-bolsa-ilustrada.webp", d: "Diseño a full color con la ilustración que elijas.", s: ["Personalizable con tu logo", "Medidas y cantidad a la medida"] },
+      { n: "Bolsas kraft", img: "imp-bolsas-kraft.webp", d: "Papel kraft natural para empaque y alimentos.", s: ["Personalizable con tu logo", "Medidas y cantidad a la medida"] },
+    ],
+  },
+  {
+    id: "imp-cajas", color: "amarillo", tag: "Impresos y empaques · Cajas",
+    titulo: "Cajas con asa y loncheras",
+    intro: "Empaques listos para llevar refrigerios, regalos y kits.",
+    layout: "grid", variante: "fotos",
+    productos: [
+      { n: "Caja lonchera ilustrada", img: "imp-caja-lonchera.webp", d: "Con asa, ideal para refrigerios y kits.", s: ["Personalizable con tu logo", "Medidas y cantidad a la medida"] },
+      { n: "Caja cojín de colores", img: "imp-caja-cojin.webp", d: "Formato práctico con asa integrada.", s: ["Personalizable con tu logo", "Medidas y cantidad a la medida"] },
+      { n: "Cajas kraft con asa", img: "imp-cajas-kraft.webp", d: "Empaque resistente con faja impresa.", s: ["Personalizable con tu logo", "Medidas y cantidad a la medida"] },
+      { n: "Kit de bolsas y cajas", img: "imp-bolsas-cajas.webp", d: "Línea de empaques con una misma imagen.", s: ["Personalizable con tu logo", "Medidas y cantidad a la medida"] },
+    ],
+  },
+  {
+    id: "imp-cajas-2", color: "rojo", tag: "Impresos y empaques · Cajas",
+    titulo: "Cajas plegadizas y de regalo",
+    intro: "Cajas impresas para producto, cosmética, envíos y obsequios.",
+    layout: "grid", variante: "fotos",
+    productos: [
+      { n: "Cajas plegadizas", img: "imp-cajas-plegadizas.webp", d: "Para empaque de producto en varios formatos.", s: ["Personalizable con tu logo", "Medidas y cantidad a la medida"] },
+      { n: "Cajas en tonos pastel", img: "imp-cajas-pastel.webp", d: "Cajas de regalo en colores suaves.", s: ["Personalizable con tu logo", "Medidas y cantidad a la medida"] },
+      { n: "Cajas para cosmética", img: "imp-cajas-cosmetica.webp", d: "Presentación cuidada para productos de belleza.", s: ["Personalizable con tu logo", "Medidas y cantidad a la medida"] },
+      { n: "Cajas kraft para envío", img: "imp-cajas-envio.webp", d: "Empaque resistente para despachos.", s: ["Personalizable con tu logo", "Medidas y cantidad a la medida"] },
+    ],
+  },
+  {
+    id: "imp-papeleria", color: "amarillo", tag: "Impresos y empaques · Papelería",
+    titulo: "Libretas, agendas y calendarios",
+    intro: "Papelería corporativa con la identidad de tu empresa.",
+    layout: "grid", variante: "fotos",
+    productos: [
+      { n: "Libretas de notas", img: "imp-libretas.webp", d: "Anilladas, con portada personalizada.", s: ["Personalizable con tu logo", "Medidas y cantidad a la medida"] },
+      { n: "Cuadernos de colores", img: "imp-cuadernos.webp", d: "Tapas en la paleta de tu marca.", s: ["Personalizable con tu logo", "Medidas y cantidad a la medida"] },
+      { n: "Agendas", img: "imp-agendas.webp", d: "Tapa dura o anillada con tu diseño.", s: ["Personalizable con tu logo", "Medidas y cantidad a la medida"] },
+      { n: "Calendario de escritorio", img: "imp-calendario.webp", d: "Presencia de marca todo el año.", s: ["Personalizable con tu logo", "Medidas y cantidad a la medida"] },
+    ],
+  },
+  {
+    id: "imp-publicidad", color: "rojo", tag: "Impresos y empaques · Publicidad impresa",
+    titulo: "Afiches y folletos",
+    intro: "Piezas impresas para comunicar tus promociones y eventos.",
+    layout: "grid", variante: "g2 fotos",
+    productos: [
+      { n: "Afiches y volantes", img: "imp-afiches.webp", d: "Impresión a color para campañas y eventos.", s: ["Personalizable con tu logo", "Medidas y cantidad a la medida"] },
+      { n: "Trípticos y folletos", img: "imp-tripticos.webp", d: "Información completa de tu empresa o producto.", s: ["Personalizable con tu logo", "Medidas y cantidad a la medida"] },
+    ],
+  },
+  {
+    id: "regalos", color: "rojo", tag: "Regalos corporativos", indice: "Regalos corporativos",
     titulo: "Regalos que dejan huella",
     intro: "Cajas personalizadas y kits empresariales para colaboradores, clientes y proveedores.",
     layout: "destacado",
@@ -100,7 +172,7 @@ const SECCIONES = [
     cta: "Quiero un kit para mi empresa",
   },
   {
-    id: "catering", color: "amarillo", tag: "Catering empresarial",
+    id: "catering", color: "amarillo", tag: "Catering empresarial", indice: "Catering empresarial",
     titulo: "Alimentamos los momentos que hacen equipo",
     intro: "Alimentación para reuniones, capacitaciones y eventos corporativos.",
     layout: "destacado",
@@ -109,7 +181,7 @@ const SECCIONES = [
     cta: "Cotizar catering",
   },
   {
-    id: "bienestar", color: "rojo", tag: "Proyectos especiales",
+    id: "bienestar", color: "rojo", tag: "Proyectos especiales", indice: "Proyectos especiales",
     titulo: "Proyectos a la medida de tu empresa",
     intro: "Combinamos alimentación, regalos, publicidad e inflables en una sola solución.",
     layout: "destacado",
@@ -159,7 +231,7 @@ function pagSeccion(s, num) {
         <div class="datos">${s.extra.datos.map(([a, b]) => `<div><b>${a}</b><span>${b}</span></div>`).join("")}</div>
       </div>`;
   } else if (s.layout === "grid") {
-    cuerpo = `<div class="grid">${s.productos.map((p) => `
+    cuerpo = `<div class="grid ${s.variante || ""}">${s.productos.map((p) => `
       <article class="card">
         <div class="foto"><img src="${IMG}${p.img}" alt="${esc(p.n)}"></div>
         <h3>${esc(p.n)}</h3><p>${esc(p.d)}</p>${specs(p)}${cotizar(p.n)}
@@ -188,13 +260,14 @@ function portada() {
       <span class="ey">Catálogo de productos</span>
       <h1>Hacemos que tu marca <em>se vea, se toque</em> <u>y se recuerde.</u></h1>
     </div>
-    <ul class="pt-lineas"><li>Inflables</li><li>Material POP</li><li>Merchandising</li><li>Regalos corporativos</li><li>Catering</li><li>Proyectos especiales</li></ul>
+    <ul class="pt-lineas"><li>Inflables</li><li>Material POP</li><li>Merchandising</li><li>Impresos y empaques</li><li>Regalos corporativos</li><li>Catering</li><li>Proyectos especiales</li></ul>
     <p class="pt-pie">Medellín · Colombia</p>
   </div></div>`;
 }
 
 function indice() {
-  const items = [["Inflables y activaciones", 3], ["Material POP", 5], ["Gorras y dotaciones", 6], ["Bolsos y morrales", 7], ["Escritura y oficina", 8], ["Plásticos de inyección", 9], ["Regalos corporativos", 10], ["Catering empresarial", 11], ["Proyectos especiales", 12], ["Cómo trabajamos", 13]];
+  const items = SECCIONES.map((s, i) => [s.indice, i + 3]).filter(([n]) => n);
+  items.push(["Cómo trabajamos", SECCIONES.length + 3]);
   return `<div class="page" data-titulo="Índice"><div class="pg">
     <div class="intro">
       
@@ -221,7 +294,7 @@ function proceso() {
         <div><b>100 %</b><span>personalizado</span></div>
       </div>
     </div>
-    ${pie(13)}
+    ${pie(SECCIONES.length + 3)}
   </div></div>`;
 }
 
