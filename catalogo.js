@@ -9,7 +9,7 @@ const SECCIONES = [
   {
     id: "inflables", color: "rojo", tag: "Inflables y activaciones", indice: "Inflables y activaciones",
     titulo: "Inflables que se ven desde lejos",
-    intro: "Diseñamos y fabricamos inflables a la medida, a motor o sellados, con la forma y el arte de tu marca.",
+    intro: "Diseñamos y fabricamos inflables a la medida, a motor, golpeadores en válvula o sellados, con la forma y el arte de tu marca.",
     layout: "filas",
     productos: [
       { n: "Réplica gigante de producto", img: "inf-hamburguesa.webp", d: "Botellas, latas, empaques o alimentos a gran escala con el arte real de tu producto.", s: ["A motor o sellado", "Hasta 14 m de alto", "Se pliega para almacenar"] },
@@ -29,6 +29,18 @@ const SECCIONES = [
       items: ["Arcos de entrada y meta", "Carpas, túneles y domos", "Juegos recreativos", "Cilindros, esferas y stands"],
       datos: [["8 a 15", "días hábiles de producción"], ["14 m", "altura máxima"]],
     },
+  },
+  {
+    id: "inflables-3", color: "rojo", tag: "Inflables y activaciones",
+    titulo: "A motor, golpeadores y sellados",
+    intro: "Tres tipos de inflables, todos personalizados y hechos a la idea del cliente.",
+    layout: "grid", variante: "fotos",
+    productos: [
+      { n: "Inflables a motor", img: "foto-inflables.webp", d: "Arcos, réplicas y figuras que se mantienen inflados con motor.", s: ["Hechos a la medida"] },
+      { n: "Golpeadores en válvula", img: "foto-inf-golpeadores.webp", d: "Barras inflables para estadios, conciertos y eventos.", s: ["Con tu logo"] },
+      { n: "Inflables sellados", img: "foto-inf-sellados.webp", d: "Piscinas, flotadores, pelotas y botellas inflables.", s: ["Con tu logo"] },
+      { n: "Activaciones combinadas", img: "foto-inf-mix.webp", d: "Arcos, botellas y golpeadores en un mismo evento.", s: ["Hechos a la idea del cliente"] },
+    ],
   },
   {
     id: "pop", color: "amarillo", tag: "Material POP", indice: "Material POP",
@@ -105,7 +117,7 @@ const SECCIONES = [
     ],
   },
   {
-    id: "imp-bolsas", color: "rojo", tag: "Impresos y empaques · Bolsas", indice: "Impresos y empaques",
+    id: "imp-bolsas", color: "rojo", tag: "Impresos en litografía · Bolsas", indice: "Impresos y empaques",
     titulo: "Bolsas con tu marca",
     intro: "Bolsas de papel impresas con tu logo para tiendas, eventos y regalos.",
     layout: "grid", variante: "fotos",
@@ -117,7 +129,7 @@ const SECCIONES = [
     ],
   },
   {
-    id: "imp-cajas", color: "amarillo", tag: "Impresos y empaques · Cajas",
+    id: "imp-cajas", color: "amarillo", tag: "Impresos en litografía · Cajas",
     titulo: "Cajas con asa y loncheras",
     intro: "Empaques listos para llevar refrigerios, regalos y kits.",
     layout: "grid", variante: "fotos",
@@ -129,7 +141,7 @@ const SECCIONES = [
     ],
   },
   {
-    id: "imp-cajas-2", color: "rojo", tag: "Impresos y empaques · Cajas",
+    id: "imp-cajas-2", color: "rojo", tag: "Impresos en litografía · Cajas",
     titulo: "Cajas plegadizas y de regalo",
     intro: "Cajas impresas para producto, cosmética, envíos y obsequios.",
     layout: "grid", variante: "fotos",
@@ -141,7 +153,7 @@ const SECCIONES = [
     ],
   },
   {
-    id: "imp-papeleria", color: "amarillo", tag: "Impresos y empaques · Papelería",
+    id: "imp-papeleria", color: "amarillo", tag: "Impresos en litografía · Papelería",
     titulo: "Libretas, agendas y calendarios",
     intro: "Papelería corporativa con la identidad de tu empresa.",
     layout: "grid", variante: "fotos",
@@ -153,7 +165,7 @@ const SECCIONES = [
     ],
   },
   {
-    id: "imp-publicidad", color: "rojo", tag: "Impresos y empaques · Publicidad impresa",
+    id: "imp-publicidad", color: "rojo", tag: "Impresos en litografía · Publicidad impresa",
     titulo: "Afiches y folletos",
     intro: "Piezas impresas para comunicar tus promociones y eventos.",
     layout: "grid", variante: "g2 fotos",
@@ -163,22 +175,32 @@ const SECCIONES = [
     ],
   },
   {
+    id: "imp-flexo", color: "amarillo", tag: "Impresos en flexografía y material sostenible",
+    titulo: "Flexografía y material sostenible",
+    intro: "Impresos plásticos para vestir tus eventos y exhibidores fabricados con PET reciclado.",
+    layout: "grid", variante: "g2 fotos",
+    productos: [
+      { n: "Impresos en flexografía", img: "foto-imp-flexo.webp", d: "Plastilonas, banderines y bolsas plásticas impresas para cerrar espacios y vestir tus eventos.", s: ["Personalizable con tu logo"] },
+      { n: "Impresos en material sostenible", img: "foto-imp-sostenible.webp", d: "Exhibidores y bandejas en PET reciclado. Para una bandeja organizadora, nuestros aliados recuperaron 942 kilos de PET, equivalentes a 28.260 botellas de 300 ml.", s: ["Economía circular"] },
+    ],
+  },
+  {
     id: "regalos", color: "rojo", tag: "Regalos corporativos", indice: "Regalos corporativos",
     titulo: "Regalos que dejan huella",
     intro: "Cajas personalizadas y kits empresariales para colaboradores, clientes y proveedores.",
     layout: "destacado",
     foto: "foto-regalos.webp",
-    lista: ["Cajas personalizadas y de Navidad", "Kits empresariales", "Regalos para colaboradores, clientes y proveedores", "Empaques y tarjetas con tu marca", "Opciones para cada presupuesto"],
+    lista: ["Cajas personalizadas (se arman a tu gusto)", "Cajas de temporada y fin de año", "Kits empresariales", "Regalos para colaboradores, clientes y proveedores", "Opciones para cada presupuesto"],
     cta: "Quiero un kit para mi empresa",
   },
   {
-    id: "catering", color: "amarillo", tag: "Catering empresarial", indice: "Catering empresarial",
+    id: "catering", color: "amarillo", tag: "Brunch corporativo para eventos", indice: "Brunch corporativo",
     titulo: "Alimentamos los momentos que hacen equipo",
     intro: "Alimentación para reuniones, capacitaciones y eventos corporativos.",
     layout: "destacado",
     foto: "foto-catering.webp",
     lista: ["Desayunos y brunch", "Refrigerios AM y PM", "Lunch box y almuerzos", "Estaciones de alimentos", "Eventos y cierres de año"],
-    cta: "Cotizar catering",
+    cta: "Cotizar brunch",
   },
   {
     id: "bienestar", color: "rojo", tag: "Proyectos especiales", indice: "Proyectos especiales",
@@ -260,7 +282,7 @@ function portada() {
       <span class="ey">Catálogo de productos</span>
       <h1>Hacemos que tu marca <em>se vea, se toque</em> <u>y se recuerde.</u></h1>
     </div>
-    <ul class="pt-lineas"><li>Inflables</li><li>Material POP</li><li>Merchandising</li><li>Impresos y empaques</li><li>Regalos corporativos</li><li>Catering</li><li>Proyectos especiales</li></ul>
+    <ul class="pt-lineas"><li>Inflables</li><li>Material POP</li><li>Merchandising</li><li>Impresos y empaques</li><li>Regalos corporativos</li><li>Brunch corporativo</li><li>Proyectos especiales</li></ul>
     <p class="pt-pie">Medellín · Colombia</p>
   </div></div>`;
 }
